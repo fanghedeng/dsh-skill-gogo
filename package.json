@@ -1,0 +1,49 @@
+{
+  "name": "dsh-skill-gogo",
+  "version": "0.4.0",
+  "description": "Skill GoGo —— 在 DSH 工作区里浏览、分类（自建文件夹/颜色/排序）、查看、选择并使用 / 下载 skill 的面板插件，支持自定义多个 skill 目录、右键重命名 skill、「在本地显示文件」以及对话输入区的 Skill 多选菜单",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "skill",
+    "skills"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "license": "MIT",
+  "author": "fanghedeng",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fanghedeng/dsh-skill-gogo.git"
+  },
+  "homepage": "https://github.com/fanghedeng/dsh-skill-gogo#readme",
+  "bugs": {
+    "url": "https://github.com/fanghedeng/dsh-skill-gogo/issues"
+  }
+}
